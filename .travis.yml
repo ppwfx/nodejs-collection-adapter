@@ -1,11 +1,23 @@
 sudo: required
 language: node_js
+node_js:
+  - "5"
+  - "5.1"
+  - "4"
+  - "4.2"
+  - "4.1"
+  - "4.0"
+  - "0.12"
+  - "0.11"
+  - "0.10"
+  - "0.8"
+  - "0.6"
+  - "iojs"
 services:
-- docker
-script:
-- cd docker && docker-compose up -d && docker exec docker_adapter_1 sh -c 'npm install && npm test'
-after_script:
-- cd ..
+- redis
+env:
+  - REDIS_PORT=6379
+  - REDIS_HOST=localhost
 deploy:
   provider: npm
   email: ph.woerdehoff@gmail.com
