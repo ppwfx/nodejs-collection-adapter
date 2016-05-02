@@ -13,7 +13,7 @@ var adapters = {
     RedisAdapter: adapterFactory.create('redis', redisConfig),
 };
 
-Object.keys(adapters).forEach(function(key){
+Object.keys(adapters).forEach(function (key) {
     describe('Run generic integration test on: ' + key, function () {
         var adapter:ICollectionAdapter = adapters[key];
 
@@ -23,7 +23,7 @@ Object.keys(adapters).forEach(function(key){
                 var key = (new Date).toString();
                 var value = "1212";
 
-                adapter.set(collection, key, value).then(function(reply){
+                adapter.set(collection, key, value).then(function (reply) {
                     console.log("set() returned: ", reply);
                     adapter.get(collection, key).then(function (receivedValue) {
                         console.log("get() returned: ", receivedValue);
