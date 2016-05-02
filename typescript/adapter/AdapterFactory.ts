@@ -1,11 +1,7 @@
-import {SqsAdapter} from "./sqs/SqsAdapter";
 import {IErrorHandler} from "../handler/error/IErrorHandler";
 import {IEncoder} from "../encoder/IEncoder";
 import {StdOutErrorHandler} from "../handler/error/StdOutErrorHandler";
 import {JsonEncoder} from "../encoder/JsonEncoder";
-import {BeanstalkdAdapter} from "./beanstalkd/BeanstalkdAdapter";
-import {ActiveMqAdapter} from "./activemq/ActiveMqAdapter";
-import {RabbitMqAdapter} from "./rabbitmq/RabbitMqAdapter";
 import {RedisAdapter} from "./redis/RedisAdapter";
 
 export class AdapterFactory {
