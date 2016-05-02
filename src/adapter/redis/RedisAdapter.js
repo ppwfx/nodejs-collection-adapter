@@ -1,5 +1,6 @@
 "use strict";
 var redis = require('redis');
+var Promise = require('bluebird');
 var RedisAdapter = (function () {
     function RedisAdapter(redisConfig) {
         var self = this;

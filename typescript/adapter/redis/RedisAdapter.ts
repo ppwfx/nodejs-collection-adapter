@@ -1,6 +1,7 @@
 import redis = require('redis');
 import {ICollectionAdapter} from "./../ICollectionAdapter";
 import {RedisConfig} from "./RedisConfig";
+import Promise = require('bluebird');
 
 export class RedisAdapter implements ICollectionAdapter {
 
@@ -21,7 +22,7 @@ export class RedisAdapter implements ICollectionAdapter {
         self.redisClient = redis.createClient(redisConfig.options);
     }
 
-    public set(collection:string, key:string, value:any) {
+    public set(collection:string, key:string, value:any):Promise {
         var self = this;
 
         return new Promise(function (resolve, reject) {
@@ -29,7 +30,7 @@ export class RedisAdapter implements ICollectionAdapter {
         });
     }
 
-    public get(collection:string, key:any) {
+    public get(collection:string, key:any):Promise {
         var self = this;
 
         return new Promise(function (resolve, reject) {
