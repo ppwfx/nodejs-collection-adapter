@@ -1,0 +1,1 @@
+# nodejs-collection-adapter

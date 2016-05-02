@@ -1,0 +1,12 @@
+sudo: required
+
+language: node_js
+
+services:
+  - docker
+
+before_install:
+  - cd docker && docker-compose up -d
+
+script:
+  - docker exec docker_adapter_1 sh -c 'npm install && npm test'

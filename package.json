@@ -1,0 +1,27 @@
+{
+  "name": "queue-adapter",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "adapter.js",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "chai": "^3.5.0",
+    "redis": "^2.5.3"
+  },
+  "devDependencies": {
+    "require-dir": "^0.3.0",
+    "gulp": "^3.6.2",
+    "gulp-tsc": "^0.10.1",
+    "gulp-shell": "^0.4.2",
+    "run-sequence": "^1.1.1",
+    "depcheck": "^0.6.3",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha src/tests/**/* -t 20000"
+  }
+}
