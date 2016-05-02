@@ -1,12 +1,16 @@
 sudo: required
-
 language: node_js
-
 services:
-  - docker
-
+- docker
 before_install:
-  - cd docker && docker-compose up -d
-
+- cd docker && docker-compose up -d
 script:
-  - docker exec docker_adapter_1 sh -c 'npm install && npm test'
+- docker exec docker_adapter_1 sh -c 'npm install && npm test'
+deploy:
+  provider: npm
+  email: ph.woerdehoff@gmail.com
+  api_key:
+    secure: oHGqw5ujM1TtV4wc60zxYuWeaEMMX+CWbLnzlrrNWC/m7wk+iQWRGjKSKWcVvR58Pkq0qX590ZQljnvWFoCUXPgkHvA26Pzp0UNTX1JB81ZY4HcxtImOgrQqG5SD3fwI4/vangua6vvg4OScvkId48YvauFbfu+2xg9sphQR7nDbq3+1g4WciVs6HIEPy84BqTQS7F0Du90cPjOgSbn43r5VSMRAwctG8CBeNirrWd7AeV5AAjBa21EXa1yvXu4+wia3wH3oLTFNV/VCZrwNsjJD7/0JltXu7smpkNcz6G/MyCPValloJLNCTA5LOa7nkiYcaP2RAbqq8iSdlS6GWgVdy9Id/2lHLdceORnRJMzMvUQ1a9ThtIlM3vfVakE6ZwoNBV7FxUBMWoV+Wp4OBLinSjGEsNSkj4PEtL3rUubLqmm8Lo3wI89gQU9RjtN722yZs2BlGELifj/KwNFS5hy1/jBeiGPg4ebDXcYruLujLn57wiPR4hGoYjQuiU6zlA+hmTH+wf7ziSZalqCRzURnFeUCaT66nBGFl7TIhn1mk3Z7ze3rOhQVB3YKpufexYGJ41R89DonD3ofL2IT52ghkpBqT8sU3RbAahKVtCuZJBDS8/4F+z/WHhN+V9WEhBLED6cZ/I/H1SB4Fe6p4kW/TDh9eNmNAtiKXDggCa8=
+  on:
+    tags: true
+    repo: 21stio/nodejs-collection-adapter
