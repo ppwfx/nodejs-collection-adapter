@@ -2,10 +2,8 @@ sudo: required
 language: node_js
 services:
 - docker
-before_install:
-- cd docker && docker-compose up -d
 script:
-- docker exec docker_adapter_1 sh -c 'npm install && npm test'
+- cd docker && docker-compose up -d && docker exec docker_adapter_1 sh -c 'npm install && npm test'
 deploy:
   provider: npm
   email: ph.woerdehoff@gmail.com
