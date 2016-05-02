@@ -16,8 +16,7 @@ node_js:
 services:
 - redis
 env:
-  - REDIS_PORT=6379
-  - REDIS_HOST=localhost
+  - REDIS_HOST=localhost REDIS_PORT=6379
 deploy:
   provider: npm
   email: ph.woerdehoff@gmail.com
