@@ -10,11 +10,14 @@
     "redis"
   ],
   "author": {
-    "name" : "Philipp Wördehoff",
-    "email" : "ph.woerdehoff@gmail.com",
-    "url" : "21st.io"
+    "name": "Philipp Wördehoff",
+    "email": "ph.woerdehoff@gmail.com",
+    "url": "21st.io"
   },
-  "homepage": "https://github.com/21stio/nodejs-collection-adapter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/21stio/nodejs-collection-adapter"
+  },
   "license": {
     "type": "MIT",
     "url": "http://www.opensource.org/licenses/mit-license.php"
@@ -22,6 +25,7 @@
   "main": "index.js",
   "dependencies": {
     "bluebird": "^3.3.4",
+    "istanbul": "^0.4.3",
     "redis": "^2.5.3"
   },
   "devDependencies": {
@@ -35,6 +39,6 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha src/tests/**/* -t 20000"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- src/tests/**/* -t 2000"
   }
 }

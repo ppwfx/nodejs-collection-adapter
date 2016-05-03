@@ -19,7 +19,7 @@ addons:
     code_climate:
         repo_token: 62d36c52dc553ee47aca24e7e6be23449bd8ec0b2bcfb997b4731d2d5275e03c
 after_script:
-  - codeclimate-test-reporter < lcov.info
+  - codeclimate-test-reporter < ./coverage/lcov.info
 deploy:
   provider: npm
   email: ph.woerdehoff@gmail.com
