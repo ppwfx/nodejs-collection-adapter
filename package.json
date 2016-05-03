@@ -1,6 +1,6 @@
 {
   "name": "colllection-adapter",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Supports redis",
   "keywords": [
     "collection",
