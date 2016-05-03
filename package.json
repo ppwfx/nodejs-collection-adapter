@@ -1,15 +1,27 @@
 {
-  "name": "queue-adapter",
-  "version": "0.0.1",
-  "private": true,
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "",
-  "main": "adapter.js",
+  "name": "colllection-adapter",
+  "version": "0.1",
+  "description": "Supports redis",
+  "keywords": [
+    "collection",
+    "key",
+    "value",
+    "adapter",
+    "redis"
+  ],
+  "author": {
+    "name" : "Philipp Wördehoff",
+    "email" : "ph.woerdehoff@gmail.com",
+    "url" : "21st.io"
+  },
+  "homepage": "https://github.com/21stio/nodejs-collection-adapter",
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/mit-license.php"
+  },
+  "main": "index.js",
   "dependencies": {
     "bluebird": "^3.3.4",
-    "chai": "^3.5.0",
     "redis": "^2.5.3"
   },
   "devDependencies": {
@@ -19,6 +31,7 @@
     "gulp-shell": "^0.4.2",
     "run-sequence": "^1.1.1",
     "depcheck": "^0.6.3",
+    "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
