@@ -1,13 +1,9 @@
 "use strict";
-var StdOutErrorHandler_1 = require("../handler/error/StdOutErrorHandler");
-var JsonEncoder_1 = require("../encoder/JsonEncoder");
 var RedisAdapter_1 = require("./redis/RedisAdapter");
 var AdapterFactory = (function () {
     function AdapterFactory() {
     }
-    AdapterFactory.prototype.create = function (name, config, errorhandler, encoder) {
-        if (errorhandler === void 0) { errorhandler = new StdOutErrorHandler_1.StdOutErrorHandler(); }
-        if (encoder === void 0) { encoder = JsonEncoder_1.JsonEncoder; }
+    AdapterFactory.prototype.create = function (name, config) {
         var adapter = null;
         switch (name) {
             case 'redis':
