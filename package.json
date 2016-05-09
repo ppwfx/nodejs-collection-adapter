@@ -25,7 +25,6 @@
   "main": "index.js",
   "dependencies": {
     "bluebird": "^3.3.4",
-    "istanbul": "^0.4.3",
     "redis": "^2.5.3"
   },
   "devDependencies": {
@@ -34,11 +33,13 @@
     "gulp-tsc": "^0.10.1",
     "gulp-shell": "^0.4.2",
     "run-sequence": "^1.1.1",
+    "istanbul": "^0.4.3",
     "depcheck": "^0.6.3",
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
+    "prepublish": "gulp build",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- src/tests/**/* -t 2000"
   }
 }
