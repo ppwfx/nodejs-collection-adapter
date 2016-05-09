@@ -1,9 +1,8 @@
 import * as Chai from 'chai';
 import {RedisConfig} from "../../adapter/redis/RedisConfig";
-import {AdapterFactory} from "../../adapter/AdapterFactory";
 import {ICollectionAdapter} from "../../adapter/ICollectionAdapter";
 
-var adapterFactory = new AdapterFactory();
+var adapterFactory = require('../../../index');
 
 var redisConfig = new RedisConfig();
 redisConfig.port = process.env.REDIS_PORT;
