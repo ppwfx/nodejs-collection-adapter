@@ -2,7 +2,6 @@
 var Chai = require('chai');
 var RedisConfig_1 = require("../../adapter/redis/RedisConfig");
 var adapterFactory = require('../../../index');
-;
 var redisConfig = new RedisConfig_1.RedisConfig();
 redisConfig.port = process.env.REDIS_PORT;
 redisConfig.host = process.env.REDIS_HOST;
