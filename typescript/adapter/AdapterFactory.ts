@@ -6,7 +6,7 @@ import {RedisAdapter} from "./redis/RedisAdapter";
 
 export class AdapterFactory {
 
-    public create(name:string, config:any) {
+    public create(name:string, config:any = {}) {
         var adapter = null;
         switch (name) {
             case 'redis':

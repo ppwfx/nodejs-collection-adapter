@@ -4,6 +4,7 @@ var AdapterFactory = (function () {
     function AdapterFactory() {
     }
     AdapterFactory.prototype.create = function (name, config) {
+        if (config === void 0) { config = {}; }
         var adapter = null;
         switch (name) {
             case 'redis':
