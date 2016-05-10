@@ -5,11 +5,19 @@
 
 Provides a simple interface to collection based data stores
 
-Currently supports
+### Installation
+
+```sh
+npm install collection-adapter
+```
+
+### Supported Services
 
 *	Redis powered by [redis](https://www.npmjs.com/package/redis)
 
-Basic usage
+### Usage
+
+Basic Javascript
 
 ```javascript
 var adapter = require('collection-adapter').create('redis');
@@ -23,7 +31,7 @@ adapter.get("my-collection", "my-key").then(function (value) {
 });
 ```
 
-Typescript usage
+Advanced Typescript
 
 ```javascript
 var adapterFactory = require('collection-adapter');
