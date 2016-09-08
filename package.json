@@ -1,5 +1,5 @@
 {
-  "name": "colllection-adapter",
+  "name": "collection-adapter",
   "version": "0.1.1",
   "description": "Supports redis",
   "keywords": [
